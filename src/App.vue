@@ -1,45 +1,33 @@
 <template>
-  <div>
-    <el-button @click="isShow=true">你好</el-button>
-
-    <el-dialog
-      title="提示"
-      :visible.sync="isShow"
-      width="30%"
-    >
-      <span>这是一段信息</span>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="isShow = false">取 消</el-button>
-        <el-button type="primary" @click="isShow = false"
-          >确 定</el-button
-        >
-      </span>
-    </el-dialog>
-
-      <el-popover
-    placement="top-start"
-    title="TIPS:"
-    width="200"
-    trigger="hover"
-    content="这里是提肛小助手,尝试提肛50次吧">
-    <el-button slot="reference">移入查看详情</el-button>
-  </el-popover>
+  <div class="container">
+    <h1>学习VueRouter</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <ul>
+          <!-- 
+            routerlink只负责切换路径
+            router-link的类名可以通过exact-active-class 和active-class
+          分别更改第一个类名和第二个类名
+          -->
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/home">Home</router-link></li>
+        </ul>
+      </div>
+      <div class="col-md-9">
+        <!-- 跳转工作由router-view来完成 -->
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name:"App",
-  data(){
-    return {
-      isShow:false
-    }
-  },
-  methods:{
-
-  }
-};
+export default { name: "App" };
 </script>
 
 <style>
+.router-link-active {
+  color: #fff !important;
+  background-color: yellowgreen !important;
+}
 </style>
