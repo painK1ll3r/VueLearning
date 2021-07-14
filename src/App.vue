@@ -3,7 +3,7 @@
     <h1>学习VueRouter</h1>
     <div class="row">
       <div class="col-md-3">
-        <ul>
+        <ul class="nav nav-stacked">
           <!-- 
             routerlink只负责切换路径
             router-link的类名可以通过exact-active-class 和active-class
