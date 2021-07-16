@@ -15,12 +15,13 @@
       </div>
       <div class="col-md-9">
         <!-- 跳转工作由router-view来完成 -->
-        <router-view />
+        <keep-alive>
+          <router-view />
+        </keep-alive>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default { name: "App" };
 </script>

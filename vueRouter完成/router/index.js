@@ -10,6 +10,7 @@ import Deatils from '../views/Home/Massages/Details'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  mode:'history',
   routes: [
     {
       path: "*",
